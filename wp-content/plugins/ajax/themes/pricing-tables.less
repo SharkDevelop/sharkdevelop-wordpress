@@ -1,0 +1,302 @@
+@color_background: #efefef;
+@color_main: #ccc;
+
+@color_starter: #009989;
+@color_pro: #CE1836;
+@color_premium: #D29209;
+
+@border_table_bottom: 10px;
+
+.ezfc-theme-pricing-tables {
+	/**
+		pricing table css
+	**/
+	&, .ezfc-label {
+		text-align: center;
+	}
+
+	.ezfc-element-wrapper-group {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+		.ezfc-group-elements {
+			border: 0;
+			border-left: @color_background 1px solid;
+			border-right: @color_background 1px solid;
+			//box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px;
+			padding: 0;
+			vertical-align: top;
+
+			.ezfc-element-wrapper-heading {
+				border: 0;
+				border-bottom: 0 !important;
+				padding: 1em !important;
+
+				h1, h2, h3, h4, h5, h6, p {
+					color: #fff;
+					margin: 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	.ezfc-pricing-header {
+		color: #fff;
+	}
+
+	.ezfc-element:not(.ezfc-element-wrapper-group):not(input):not(select) {
+		border-bottom: @color_main 1px dashed;
+		padding: 0.2em 1.5em 1em 1.5em
+	}
+	.ezfc-group-elements .ezfc-element:last-child {
+		border-bottom: 0;
+	}
+
+	.ezfc-group-elements .ezfc-element:last-child .ezfc-element {
+		border-bottom: none;
+	}
+
+	.ezfc-element-wrapper-checkbox, .ezfc-element-wrapper-radio {
+		text-align: left;
+	}
+
+	.ezfc-col-6 {
+		width: 100%;
+	}
+
+	.ezfc-pricing-highlight {
+		padding-top: 1em;
+		padding-bottom: 2em;
+		z-index: 1;
+	}
+
+	/**
+		starter
+	**/
+	.ezfc-pricing-table-starter {
+		&:after {
+			border-bottom: @color_starter @border_table_bottom solid;
+			width: 100%;
+		}
+
+		.ezfc-element-wrapper-heading {
+			background: @color_starter;
+		}
+	}
+
+	/**
+		pro
+	**/
+	.ezfc-pricing-table-pro {
+		&:after {
+			border-bottom: @color_pro @border_table_bottom solid;
+			width: 100%;
+		}
+
+		.ezfc-element-wrapper-heading {
+			background: @color_pro;
+		}
+	}
+
+	/**
+		premium
+	**/
+	.ezfc-pricing-table-premium {
+		&:after {
+			border-bottom: @color_premium @border_table_bottom solid;
+			width: 100%;
+		}
+
+		.ezfc-element-wrapper-heading {
+			background: @color_premium;
+		}
+	}
+
+	/**
+		additional styling
+	**/
+	// label
+	.ezfc-label {
+		display: block;
+		font-size: 1.2em;
+		font-weight: 400;
+		margin: 0;
+		padding: 0.5em;
+	}
+
+	// input fields
+	.ezfc-element-input,
+	.ezfc-element-numbers,
+	.ezfc-element-textarea,
+	.ezfc-element-select {
+		border: 0;
+		background-color: @color_background;
+		color: @color_main;
+		padding: 0.5em 1em;
+		width: 100%;
+	}
+
+	// radio/checkbox input
+	.ezfc-element-radio-input,
+	.ezfc-element-checkbox-input {
+		margin: 0 0.5em 0.2em 1em;
+	}
+
+	// daterange
+	.ezfc-element-daterange {
+		width: 49%;
+	}
+	.ezfc-element-daterange-from {
+		margin-right: 1%;
+	}
+	.ezfc-element-daterange-to {
+		margin-left: 1%;
+	}
+
+	// image
+	.ezfc-element-wrapper-image img {
+		max-width: 100%;
+	}
+
+	// subtotal
+	.ezfc-element-wrapper-subtotal .ezfc-text {
+		font-size: 1.5em;
+		padding: 0.5em;
+	}
+
+	// spinner
+	.ui-spinner {
+		border: 0;
+		border-radius: 0;
+		width: 100%;
+	}
+	.ui-spinner-input {
+		font-family: "Open Sans", sans-serif;
+		font-size: 0.9em;
+		font-weight: 300;
+		margin: 0;
+	}
+
+	// price
+	.ezfc-price {
+		display: inline-block;
+		font-size: 1.75em;
+		font-weight: 700;
+		padding: 0.5em;
+	}
+	.ezfc-element-price {
+		font-style: italic;
+	}
+
+	// submit button
+	.ezfc-btn, .ezfc-step-button {
+		border: 0;
+		background-color: @color_background;
+		color: @color_main;
+		padding: 0.5em 1em;
+		.ezfc-transition;
+		.ezfc-hover-lighten;
+	}
+
+	// success text
+	.ezfc-success-text {
+		display: none;
+	}
+
+	// required char
+	.ezfc-required-char {
+		color: #f00;
+	}
+
+	// file upload
+	input.ezfc-element-fileupload {
+		margin: 0.5em 0;
+	}
+	.ezfc-fileupload-message {
+		padding: 0.5em 0;
+	}
+	.ezfc-upload-button {
+		border: 0;
+		margin: 0.5em 0;
+		padding: 0.5em 1em;
+		background-color: @color_background;
+		color: @color_main;
+		.ezfc-transition;
+		.ezfc-hover-lighten;
+	}
+
+	// icon
+	.ezfc-element .fa {
+		color: @color_main;
+	}
+
+	// placeholder
+	::-webkit-input-placeholder { .ezfc-placeholder; }
+	:-moz-placeholder { .ezfc-placeholder; }
+	::-moz-placeholder { .ezfc-placeholder; }
+	:-ms-input-placeholder { .ezfc-placeholder; }
+
+	// steps
+	@stepColorCompleted: #1C91E9;
+	@textColorCompleted: #fff;
+	@stepColorHover: lighten(@stepColorCompleted, 10%);
+
+	.ezfc-step-indicator-item {
+	    background-color: @color_background;
+	    color: @color_main;
+
+	    &:before {
+	        border-color: @color_background;
+	        border-left-color: transparent;
+	    }
+	    &:after {
+	        border: 15px solid transparent;
+	        border-left-color: @color_background;
+	    }
+	    &.ezfc-step-indicator-item-active {
+	        background-color: @stepColorCompleted;
+	        color: @textColorCompleted;
+
+	        &:before {
+	            border-color: @stepColorCompleted;
+	            border-left-color: transparent;
+	        }
+	        &:after {
+	            border-left-color: @stepColorCompleted;
+	        }
+	        &:hover {
+	            background-color: @stepColorHover;
+	            border-color: @stepColorHover;
+	            color: @textColorCompleted;
+	            text-decoration: none;
+	            &:before {
+	                border-color: @stepColorHover;
+	                border-left-color: transparent;
+	            }
+	            &:after {
+	                border-left-color: @stepColorHover;
+	            }
+	        }
+	    }
+	}
+}
+
+.ezfc-placeholder {
+	color: #aaa;
+	font-style: italic;
+}
+
+.ezfc-transition(@duration: 0.2s, @timing: ease-in-out) {
+	-webkit-transition: all @duration @timing;
+	-moz-transition: all @duration @timing;
+	-o-transition: all @duration @timing;
+	transition: all @duration @timing;
+}
+
+.ezfc-hover-lighten {
+	&:hover {
+		background-color: lighten(@color_background, 5%);
+		color: lighten(@color_main, 5%);
+	}
+}

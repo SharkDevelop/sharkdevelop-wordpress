@@ -1,0 +1,45 @@
+.DS_Store
+.vscode/
+.idea/
+
+# Конфигурация
+wp-config.php
+
+# Базы данных и архивы
+*.sql
+*.tar
+*.tar.gz
+*.zip
+*.log
+
+# WordPress uploads и кэш
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/wflogs/
+wp-content/ai1wm-backups/
+imagify-backup/
+
+# Прочее
+cgi-bin/
+test/
+pdd-chess/
+
+.ftpquota
+.tmb/
+move.sh
+
+.htaccess.bk
+.htaccess_bak*
+wp-config.php_*
+
+wp-admin/
+wp-includes/
+
+wp-content/et-cache/
+wp-content/aiowps_backups/
+wp-content/backups-dup-pro/
+wp-content/litespeed/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/wflogs/
