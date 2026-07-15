@@ -155,12 +155,14 @@ mysql "$DEV_DB" < "$REMOTE_DUMP"
 wp search-replace \
   '$LOCAL_URL_HTTP' \
   '$DEV_URL' \
-  --all-tables
+  --all-tables \
+  --report-changed-only
 
 wp search-replace \
   '$LOCAL_URL_HTTPS' \
   '$DEV_URL' \
-  --all-tables
+  --all-tables \
+  --report-changed-only
 
 wp option update home '$DEV_URL'
 wp option update siteurl '$DEV_URL'
