@@ -50,3 +50,5 @@ move.sh
 .htaccess_bak*
 wp-config.php_*
 .dev-deploy.sql
+sharkdevelop-current.sql
+wp-content/plugins/litespeed-cache/src/data_structure/
