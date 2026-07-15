@@ -2,29 +2,47 @@
 .vscode/
 .idea/
 
-# Конфигурация
+# WordPress config
 wp-config.php
 
-# Базы данных и архивы
+# Local development
+local-xdebuginfo.php
+.user.ini
+
+# Databases and archives
 *.sql
 *.tar
 *.tar.gz
 *.zip
 *.log
 
-# WordPress uploads и кэш
+# WordPress core (используем ядро сервера)
+wp-admin/
+wp-includes/
+
+# User content (не хранится в Git)
 wp-content/uploads/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/wflogs/
+wp-content/litespeed/
+wp-content/et-cache/
 wp-content/ai1wm-backups/
-imagify-backup/
+wp-content/aiowps_backups/
+wp-content/backups-dup-pro/
+wp-content/webp-express/
+wp-content/updraft/
 
-# Прочее
+# Local plugin configs
+wp-content/wp-rocket-config/*.local.php
+
+# Temporary directories
 cgi-bin/
 test/
 pdd-chess/
+imagify-backup/
 
+# Misc
 .ftpquota
 .tmb/
 move.sh
@@ -32,14 +50,3 @@ move.sh
 .htaccess.bk
 .htaccess_bak*
 wp-config.php_*
-
-wp-admin/
-wp-includes/
-
-wp-content/et-cache/
-wp-content/aiowps_backups/
-wp-content/backups-dup-pro/
-wp-content/litespeed/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/wflogs/
