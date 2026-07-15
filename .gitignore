@@ -10,7 +10,6 @@ local-xdebuginfo.php
 .user.ini
 
 # Databases and archives
-*.sql
 *.tar
 *.tar.gz
 *.zip
@@ -50,3 +49,4 @@ move.sh
 .htaccess.bk
 .htaccess_bak*
 wp-config.php_*
+.dev-deploy.sql
