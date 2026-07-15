@@ -127,15 +127,17 @@ echo "4. Экспортируем локальную базу..."
 "${WP_CLI[@]}" --path="$LOCAL_PUBLIC" db export "$DUMP_FILE"
 
 echo "5. Синхронизируем uploads..."
-RSYNC_DELETE=()
 if [[ "$DELETE_REMOTE_UPLOADS" == "1" ]]; then
-  RSYNC_DELETE=(--delete)
+  rsync -az --progress --delete \
+    -e "ssh -p $SSH_PORT" \
+    "$LOCAL_PUBLIC/wp-content/uploads/" \
+    "$SSH_USER@$SSH_HOST:$DEV_PATH/wp-content/uploads/"
+else
+  rsync -az --progress \
+    -e "ssh -p $SSH_PORT" \
+    "$LOCAL_PUBLIC/wp-content/uploads/" \
+    "$SSH_USER@$SSH_HOST:$DEV_PATH/wp-content/uploads/"
 fi
-
-rsync -az --progress "${RSYNC_DELETE[@]}" \
-  -e "ssh -p $SSH_PORT" \
-  "$LOCAL_PUBLIC/wp-content/uploads/" \
-  "$SSH_USER@$SSH_HOST:$DEV_PATH/wp-content/uploads/"
 
 echo "6. Загружаем дамп..."
 scp -P "$SSH_PORT" \
