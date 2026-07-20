@@ -144,6 +144,10 @@ scp -P "$SSH_PORT" \
   "$DUMP_FILE" \
   "$SSH_USER@$SSH_HOST:$REMOTE_DUMP"
 
+LOCAL_URL_HTTP_ESC="${LOCAL_URL_HTTP//\//\\/}"
+LOCAL_URL_HTTPS_ESC="${LOCAL_URL_HTTPS//\//\\/}"
+DEV_URL_ESC="${DEV_URL//\//\\/}"
+
 echo "7. Импортируем базу и заменяем адрес..."
 ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" <<EOF
 set -e
@@ -161,6 +165,18 @@ wp search-replace \
 wp search-replace \
   '$LOCAL_URL_HTTPS' \
   '$DEV_URL' \
+  --all-tables \
+  --report-changed-only
+
+wp search-replace \
+  '$LOCAL_URL_HTTP_ESC' \
+  '$DEV_URL_ESC' \
+  --all-tables \
+  --report-changed-only
+
+wp search-replace \
+  '$LOCAL_URL_HTTPS_ESC' \
+  '$DEV_URL_ESC' \
   --all-tables \
   --report-changed-only
 
