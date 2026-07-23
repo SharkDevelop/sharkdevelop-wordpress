@@ -1,11 +1,9 @@
 # Current Task
 
-Dev deployment infrastructure is ready.
+Custom frontend rebuild has started on branch `codex/custom-theme-rebuild`.
 
-- Local WordPress runs through Local.
-- The repository is linked to Local public path.
-- The `dev` branch deploys to `https://dev.sharkdevelop.com`.
-- Local database and uploads can be deployed to dev with `./scripts/deploy-dev.sh`.
+- WordPress remains the CMS.
+- Elementor is not a dependency for the new frontend.
+- New frontend work starts with a custom theme and project data structure.
 
-Next implementation task has not been selected yet.
-
+Current focus: prepare Projects and Services structure before migrating content or disabling plugins.

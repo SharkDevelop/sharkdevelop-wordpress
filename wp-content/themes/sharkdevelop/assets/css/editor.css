@@ -1,0 +1,13 @@
+body {
+	font-family: Inter, Arial, sans-serif;
+	line-height: 1.55;
+}
+
+.wp-block {
+	max-width: 1120px;
+}
+
+.wp-block[data-align="wide"] {
+	max-width: 1360px;
+}
+

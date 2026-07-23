@@ -37,6 +37,7 @@ wp-content/wp-rocket-config/*.local.php
 
 # Temporary directories
 _projects/
+_images/
 cgi-bin/
 test/
 pdd-chess/
