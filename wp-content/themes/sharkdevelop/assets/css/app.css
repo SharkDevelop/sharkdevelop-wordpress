@@ -208,13 +208,19 @@ img {
 	flex: 0 0 auto;
 }
 
-.has-arrow-icon {
+.has-arrow-icon,
+.wp-block-button.button--cta .wp-block-button__link,
+.wp-block-button.button--primary .wp-block-button__link,
+.wp-block-button.button--secondary .wp-block-button__link {
 	display: inline-flex;
 	align-items: center;
 	gap: 12px;
 }
 
-.has-arrow-icon::after {
+.has-arrow-icon::after,
+.wp-block-button.button--cta .wp-block-button__link::after,
+.wp-block-button.button--primary .wp-block-button__link::after,
+.wp-block-button.button--secondary .wp-block-button__link::after {
 	content: "";
 	display: block;
 	width: 16px;
@@ -240,7 +246,13 @@ a.has-arrow-icon:not(.wp-block-button__link):focus-visible {
 }
 
 a.has-arrow-icon:not(.wp-block-button__link):hover::after,
-a.has-arrow-icon:not(.wp-block-button__link):focus-visible::after {
+a.has-arrow-icon:not(.wp-block-button__link):focus-visible::after,
+.wp-block-button.button--cta .wp-block-button__link:hover::after,
+.wp-block-button.button--cta .wp-block-button__link:focus-visible::after,
+.wp-block-button.button--primary .wp-block-button__link:hover::after,
+.wp-block-button.button--primary .wp-block-button__link:focus-visible::after,
+.wp-block-button.button--secondary .wp-block-button__link:hover::after,
+.wp-block-button.button--secondary .wp-block-button__link:focus-visible::after {
 	transform: translateX(4px);
 }
 

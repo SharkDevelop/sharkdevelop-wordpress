@@ -25,18 +25,16 @@
 
 <!-- wp:buttons {"className":"hero__actions"} -->
 <div class="wp-block-buttons hero__actions"><!-- wp:button {"className":"button--cta"} -->
-<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button has-arrow-icon" href="/contact/">Start a Project</a></div>
+<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"button--secondary"} -->
-<div class="wp-block-button button--secondary"><a class="wp-block-button__link wp-element-button has-arrow-icon" href="/case-studies/">View our work</a></div>
+<div class="wp-block-button button--secondary"><a class="wp-block-button__link wp-element-button" href="/case-studies/">View our work</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"hero-art","layout":{"type":"default"}} -->
-<div class="wp-block-group hero-art" aria-hidden="true"></div>
-<!-- /wp:group --></div>
+</div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->
 
@@ -428,7 +426,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"button--primary"} -->
-<div class="wp-block-button button--primary"><a class="wp-block-button__link wp-element-button has-arrow-icon" href="/contact/">Start a Project</a></div>
+<div class="wp-block-button button--primary"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
