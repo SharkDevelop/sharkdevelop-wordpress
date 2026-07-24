@@ -85,14 +85,16 @@
 			const progress = clamp((window.innerHeight - waveTop) / travel, 0, 1);
 			const eased = 0.5 - Math.cos(progress * Math.PI) / 2;
 			const point = sampleWavePath(eased);
+			const verticalScale = clamp(rect.width / 1600, 0.62, 1);
+			const waveMiddle = 155;
 			const startDrop = Math.max(0, 1 - eased / 0.42) * 48;
 			const firstArcDrop = Math.sin(clamp((eased - 0.06) / 0.46, 0, 1) * Math.PI) * 28;
 			const x = point.x;
-			const y = point.y - startDrop - firstArcDrop;
+			const y = waveMiddle + (point.y - waveMiddle - startDrop - firstArcDrop) * verticalScale;
 			const rotate = point.rotate;
 
 			section.style.setProperty('--sd-wave-progress', eased.toFixed(3));
-			section.style.setProperty('--sd-shark-fin-x', `${x.toFixed(2)}vw`);
+			section.style.setProperty('--sd-shark-fin-x', `${x.toFixed(2)}%`);
 			section.style.setProperty('--sd-shark-fin-y', `${y.toFixed(2)}px`);
 			section.style.setProperty('--sd-shark-fin-rotate', `${rotate.toFixed(2)}deg`);
 		});

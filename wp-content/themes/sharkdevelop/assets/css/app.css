@@ -653,7 +653,7 @@ h1 em {
 
 .services-section {
 	--sd-wave-progress: 0;
-	--sd-shark-fin-x: -8vw;
+	--sd-shark-fin-x: -4%;
 	--sd-shark-fin-y: 145px;
 	--sd-shark-fin-rotate: -8deg;
 	position: relative;
