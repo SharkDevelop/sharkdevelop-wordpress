@@ -5,6 +5,57 @@
 		document.body.classList.toggle('has-scrolled', window.scrollY > 0);
 	};
 
+	const enableSmoothScroll = () => {
+		if (!window.Lenis) {
+			return;
+		}
+
+		const desktopMotionQuery = window.matchMedia(
+			'(min-width: 768px) and (prefers-reduced-motion: no-preference)'
+		);
+		let lenis;
+		let animationFrame = 0;
+
+		const stop = () => {
+			if (animationFrame) {
+				window.cancelAnimationFrame(animationFrame);
+				animationFrame = 0;
+			}
+
+			if (lenis) {
+				lenis.destroy();
+				lenis = undefined;
+			}
+		};
+
+		const start = () => {
+			if (lenis || !desktopMotionQuery.matches) {
+				return;
+			}
+
+			lenis = new window.Lenis({
+				lerp: 0.1,
+				smoothWheel: true,
+				syncTouch: false,
+			});
+
+			const animate = (time) => {
+				lenis.raf(time);
+				animationFrame = window.requestAnimationFrame(animate);
+			};
+
+			animationFrame = window.requestAnimationFrame(animate);
+		};
+
+		const updateState = () => {
+			stop();
+			start();
+		};
+
+		start();
+		desktopMotionQuery.addEventListener('change', updateState);
+	};
+
 	const waveSections = [...document.querySelectorAll('.services-section')];
 	let waveArtFrame = 0;
 
@@ -80,7 +131,7 @@
 		waveSections.forEach((section) => {
 			const rect = section.getBoundingClientRect();
 			const waveTop = rect.bottom - 120;
-			const waveFinishTop = -130;
+			const waveFinishTop = -300;
 			const travel = window.innerHeight - waveFinishTop;
 			const progress = clamp((window.innerHeight - waveTop) / travel, 0, 1);
 			const eased = 0.5 - Math.cos(progress * Math.PI) / 2;
@@ -110,6 +161,7 @@
 
 	updateHeaderState();
 	updateWaveArt();
+	enableSmoothScroll();
 	window.addEventListener('scroll', updateHeaderState, { passive: true });
 	window.addEventListener('scroll', requestWaveArtUpdate, { passive: true });
 	window.addEventListener('resize', requestWaveArtUpdate);
