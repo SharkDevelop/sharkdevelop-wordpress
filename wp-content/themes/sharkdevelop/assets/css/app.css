@@ -33,7 +33,9 @@
 	--sd-gradient-primary: linear-gradient(135deg, var(--sd-palette-primary), var(--sd-palette-secondary));
 	--sd-gradient-accent: linear-gradient(135deg, var(--sd-palette-accent), var(--sd-palette-secondary));
 	--sd-shadow: 0 24px 70px rgba(var(--sd-rgb-bg), 0.16);
-	--sd-radius-button: 8px;
+	--sd-font-text: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--sd-font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--sd-radius-button: 999px;
 	--sd-header-height: 88px;
 	--sd-container: min(1210px, calc(100vw - 48px));
 }
@@ -59,8 +61,17 @@ body {
 	margin: 0;
 	color: var(--sd-color-ink);
 	background: var(--sd-color-paper);
-	font-family: Inter, Arial, sans-serif;
+	font-family: var(--sd-font-text);
 	line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--sd-font-display);
 }
 
 a {
@@ -407,7 +418,7 @@ button.button--light:focus-visible,
 	height: 48px;
 	place-items: center;
 	border: 0;
-	border-radius: var(--sd-radius-button);
+	border-radius: 50%;
 	color: var(--sd-color-ink);
 	background: rgba(var(--sd-rgb-primary), 0.12);
 	cursor: pointer;
@@ -818,11 +829,18 @@ h1 em {
 }
 
 .section-heading {
+	position: relative;
+	isolation: isolate;
 	display: flex;
 	align-items: end;
 	justify-content: space-between;
 	gap: 32px;
 	margin-bottom: 34px;
+}
+
+.section-heading > .text-link {
+	position: relative;
+	z-index: 1;
 }
 
 .section-heading h2 {
@@ -840,7 +858,7 @@ h1 em {
 	min-height: 290px;
 	overflow: hidden;
 	border: 1px solid rgba(var(--sd-rgb-text), 0.72);
-	border-radius: 8px;
+	border-radius: 0;
 	background: var(--sd-color-paper);
 	box-shadow: var(--sd-shadow);
 }
@@ -1212,6 +1230,10 @@ h1 em {
 	border-radius: 8px;
 	overflow: hidden;
 	background: var(--sd-color-paper);
+}
+
+.project-card {
+	border-radius: 0;
 }
 
 .content-card__body,
