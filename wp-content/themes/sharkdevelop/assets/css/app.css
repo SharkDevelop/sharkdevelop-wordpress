@@ -226,6 +226,12 @@ img {
 		transform 180ms ease;
 }
 
+.button.button--large {
+	min-height: 96px;
+	padding-inline: 48px;
+	font-size: 1.05rem;
+}
+
 .icon {
 	display: block;
 	flex: 0 0 auto;
@@ -313,7 +319,8 @@ a.button--light:focus-visible::after,
 .wp-block-button.button--cta,
 .wp-block-button.button--primary,
 .wp-block-button.button--secondary,
-.wp-block-button.button--light {
+.wp-block-button.button--light,
+.wp-block-button.button--outline {
 	background: transparent;
 	box-shadow: none;
 }
@@ -418,6 +425,53 @@ a.button--secondary.has-arrow-icon:focus-visible::after,
 		box-shadow 180ms ease;
 }
 
+.button.button--outline,
+.wp-block-button.button--outline .wp-block-button__link {
+	position: relative;
+	z-index: 0;
+	color: var(--sd-color-ink);
+	border-color: transparent;
+	background-color: transparent;
+	background-image: var(--sd-gradient-primary);
+	background-origin: padding-box;
+	background-clip: padding-box;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	box-shadow: none;
+	transition:
+		background-size 500ms ease-in-out,
+		color 500ms ease-in-out,
+		border-color 500ms ease-in-out,
+		transform 180ms ease;
+}
+
+.button.button--outline::before,
+.wp-block-button.button--outline .wp-block-button__link::before {
+	position: absolute;
+	inset: 0;
+	padding: 1px;
+	border-radius: inherit;
+	background: var(--sd-gradient-primary);
+	-webkit-mask:
+		linear-gradient(#000 0 0) content-box,
+		linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	content: "";
+	pointer-events: none;
+}
+
+.button.button--outline:hover,
+.button.button--outline:focus-visible,
+.wp-block-button.button--outline .wp-block-button__link:hover,
+.wp-block-button.button--outline .wp-block-button__link:focus-visible {
+	color: var(--sd-color-on-dark);
+	background-size: 100% 100%;
+	box-shadow: none;
+	transform: translateY(-2px);
+}
+
 a.button--light:hover,
 a.button--light:focus-visible,
 button.button--light:hover,
@@ -443,7 +497,8 @@ a.button--light.has-arrow-icon:focus-visible::after,
 	color: var(--sd-color-on-dark);
 }
 
-.button--light .button__label {
+.button--light .button__label,
+.button--outline .button__label {
 	background-image: linear-gradient(90deg, var(--sd-color-on-dark) 0 calc(50% + 76px), var(--sd-color-ink) calc(50% + 76px) 100%);
 	background-position: right center;
 	background-repeat: no-repeat;
@@ -455,7 +510,9 @@ a.button--light.has-arrow-icon:focus-visible::after,
 }
 
 .button--light:hover .button__label,
-.button--light:focus-visible .button__label {
+.button--light:focus-visible .button__label,
+.button--outline:hover .button__label,
+.button--outline:focus-visible .button__label {
 	background-position: left center;
 	transition-delay: 100ms;
 }
@@ -930,6 +987,12 @@ h1 em {
 	gap: 20px;
 }
 
+.project-showcase__footer {
+	display: flex;
+	justify-content: center;
+	padding-top: 64px;
+}
+
 .project-showcase__item {
 	position: relative;
 	z-index: 1;
@@ -948,10 +1011,16 @@ h1 em {
 	width: 100%;
 	min-height: 440px;
 	overflow: hidden;
-	border: 1px solid rgba(var(--sd-rgb-text), 0.72);
+	border: 0;
 	border-radius: 0;
 	background: var(--sd-color-paper);
-	box-shadow: var(--sd-shadow);
+	box-shadow: none;
+	transition: box-shadow 180ms ease;
+}
+
+.showcase-card:hover,
+.showcase-card:focus-within {
+	box-shadow: 0 24px 52px rgba(var(--sd-card-glow-rgb), 0.32);
 }
 
 .showcase-card::before {
