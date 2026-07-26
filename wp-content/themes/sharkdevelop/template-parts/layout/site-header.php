@@ -37,9 +37,8 @@
 		</nav>
 
 		<div class="site-header__actions">
-			<a class="button button--primary" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
+			<a class="button button--primary has-arrow-icon" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 				<?php esc_html_e( 'Start a Project', 'sharkdevelop' ); ?>
-				<?php echo sharkdevelop_arrow_icon(); ?>
 			</a>
 			<button class="icon-button" type="button" aria-label="<?php esc_attr_e( 'Open menu', 'sharkdevelop' ); ?>">
 				<span></span>

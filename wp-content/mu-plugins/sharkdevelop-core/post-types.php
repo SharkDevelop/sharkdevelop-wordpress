@@ -5,6 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'init', 'sharkdevelop_register_post_types' );
+add_filter( 'pll_get_post_types', 'sharkdevelop_register_polylang_project_post_type', 10, 2 );
+
+function sharkdevelop_register_polylang_project_post_type( array $post_types, bool $is_settings ): array {
+	$post_types['sd_project'] = 'sd_project';
+
+	return $post_types;
+}
 
 function sharkdevelop_register_post_types(): void {
 	register_post_type(

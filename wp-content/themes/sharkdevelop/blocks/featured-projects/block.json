@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sharkdevelop/featured-projects",
+  "version": "1.0.0",
+  "title": "Featured projects",
+  "category": "widgets",
+  "icon": "portfolio",
+  "description": "Displays projects selected for the homepage.",
+  "textdomain": "sharkdevelop",
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php",
+  "supports": {
+    "html": false
+  }
+}
