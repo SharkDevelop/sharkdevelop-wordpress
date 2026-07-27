@@ -357,13 +357,14 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"section","className":"section why-section alignfull","layout":{"type":"default"}} -->
-<section class="wp-block-group section why-section alignfull"><!-- wp:group {"className":"container why-layout","layout":{"type":"default"}} -->
-<div class="wp-block-group container why-layout"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"eyebrow"} -->
+<section class="wp-block-group section why-section alignfull"><!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container"><!-- wp:paragraph {"className":"eyebrow"} -->
 <p class="eyebrow">Why Shark Develop</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading -->
+<!-- wp:group {"className":"why-layout","layout":{"type":"default"}} -->
+<div class="wp-block-group why-layout"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:heading -->
 <h2 class="wp-block-heading">A partner you can <span>build</span> with</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
@@ -409,6 +410,7 @@
 <p>We focus on what matters for your business and your users.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->
 
@@ -425,24 +427,10 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"button--primary"} -->
-<div class="wp-block-button button--primary"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"button--primary button--large"} -->
+<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"cta-device","layout":{"type":"default"}} -->
-<div class="wp-block-group cta-device"><!-- wp:spacer {"height":"22px"} -->
-<div style="height:22px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:spacer {"height":"22px"} -->
-<div style="height:22px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:spacer {"height":"22px"} -->
-<div style="height:22px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>
