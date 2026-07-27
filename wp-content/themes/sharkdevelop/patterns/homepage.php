@@ -12,7 +12,7 @@
 <section class="wp-block-group hero alignfull"><!-- wp:group {"className":"container hero__inner","layout":{"type":"default"}} -->
 <div class="wp-block-group container hero__inner"><!-- wp:group {"className":"hero__content","layout":{"type":"default"}} -->
 <div class="wp-block-group hero__content"><!-- wp:paragraph {"className":"eyebrow"} -->
-<p class="eyebrow">Software development company</p>
+<p class="eyebrow">Mobile app and web development studio</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1} -->
@@ -20,12 +20,12 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>We design and develop mobile apps and web platforms that help startups and businesses move faster, scale smarter, and stay ahead.</p>
+<p>Shark Develop designs and builds mobile apps, web platforms, and custom software for startups and growing businesses.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"hero__actions"} -->
 <div class="wp-block-buttons hero__actions"><!-- wp:button {"className":"button--cta"} -->
-<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
+<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contact/">Let&rsquo;s talk</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"button--secondary"} -->
@@ -66,7 +66,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>iOS, Android and cross-platform applications with clean UX and stable performance.</p>
+<p>iOS, Android and cross-platform applications for customer-facing products, internal tools, and digital services.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -82,7 +82,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Web applications, client portals and dashboards that help businesses run better.</p>
+<p>Web applications, client portals, and dashboards for optimizing business processes.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -98,7 +98,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Scalable backend systems, integrations and API development.</p>
+<p>Backend and APIs that connect mobile apps, web platforms, internal systems, and third-party services.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -114,7 +114,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Clear, intuitive interfaces that users love and that convert.</p>
+<p>User flows, wireframes, interfaces, and design systems for web and mobile products.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -126,11 +126,11 @@
 
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Product Development</h3>
+<h3 class="wp-block-heading">Product Discovery &amp; Delivery</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>From idea to launch and beyond. We build, scale and improve products.</p>
+<p>Product planning, MVP development, launch, and ongoing iteration.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -428,7 +428,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"button--primary button--large"} -->
-<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contact/">Start a Project</a></div>
+<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contact/">Let&rsquo;s talk</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

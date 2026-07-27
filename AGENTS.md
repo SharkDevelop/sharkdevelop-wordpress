@@ -72,6 +72,24 @@
 ./scripts/deploy-dev.sh
 ```
 
+## Page Content Workflow
+
+- First determine where the requested content lives:
+  - editable page content is stored in the local WordPress database;
+  - shared header, footer, and template text may live in theme PHP files;
+  - theme patterns are starter templates, not necessarily the content of an already-created page.
+- Read `$table_prefix` from the local `wp-config.php` before querying the database. Never assume the prefix is `wp_`.
+- Identify the active page from the prefixed options table (`show_on_front`, `page_on_front`) or by its slug and language. Inspect the exact current text before changing it.
+- For multilingual content, update only the requested language version. Do not copy or synchronize translations unless the user explicitly requests it.
+- Prefer WP-CLI running in the Local environment for page-content updates so WordPress creates a revision. If WP-CLI is unavailable, use a controlled database update only after:
+  1. saving the current `post_content` to a temporary, untracked location;
+  2. limiting the update to the verified post ID;
+  3. replacing only the exact agreed text;
+  4. updating `post_modified` and `post_modified_gmt`.
+- Do not run global text replacements across posts, languages, or database tables.
+- When a changed phrase also exists in the canonical theme pattern, update that pattern separately to keep future page creation consistent.
+- Verify the rendered local page after every content update. Confirm the requested new text is present and the old text is absent.
+
 ## Deployment Boundary
 
 - `dev` is allowed to receive full local DB and uploads sync.

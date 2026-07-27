@@ -56,17 +56,7 @@ function sharkdevelop_render_featured_projects(): string {
 
 			$summary = (string) get_post_meta( get_the_ID(), 'sd_project_summary', true );
 			$summary = $summary ?: get_the_excerpt();
-			$technology_terms = get_the_terms( get_the_ID(), 'sd_project_technology' );
-			$platform_terms = get_the_terms( get_the_ID(), 'sd_project_platform' );
-			$terms = array();
-
-			if ( ! empty( $technology_terms ) && ! is_wp_error( $technology_terms ) ) {
-				$terms = array_merge( $terms, $technology_terms );
-			}
-
-			if ( ! empty( $platform_terms ) && ! is_wp_error( $platform_terms ) ) {
-				$terms = array_merge( $terms, $platform_terms );
-			}
+			$terms = get_the_terms( get_the_ID(), 'sd_project_tag' );
 			?>
 			<article <?php post_class( 'project-showcase__item' ); ?>>
 				<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" style="--sd-card-glow-rgb: <?php echo esc_attr( implode( ', ', $glow_rgb ) ); ?>;">
@@ -87,8 +77,8 @@ function sharkdevelop_render_featured_projects(): string {
 								<p><?php echo esc_html( $summary ); ?></p>
 							<?php endif; ?>
 							<?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
-								<div class="tag-list">
-									<?php foreach ( array_slice( $terms, 0, 4 ) as $term ) : ?>
+								<div class="showcase-card__tags">
+									<?php foreach ( array_slice( $terms, 0, 6 ) as $term ) : ?>
 										<span><?php echo esc_html( $term->name ); ?></span>
 									<?php endforeach; ?>
 								</div>

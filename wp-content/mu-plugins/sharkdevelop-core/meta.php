@@ -7,6 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', 'sharkdevelop_register_project_meta' );
 add_action( 'init', 'sharkdevelop_register_service_meta' );
 add_action( 'add_meta_boxes_sd_project', 'sharkdevelop_add_project_homepage_meta_box' );
+add_action( 'add_meta_boxes_sd_project', 'sharkdevelop_add_project_terms_meta_box' );
+add_action( 'admin_enqueue_scripts', 'sharkdevelop_enqueue_project_terms_admin_assets' );
 add_action( 'save_post_sd_project', 'sharkdevelop_save_project_homepage_meta' );
 
 function sharkdevelop_register_project_meta(): void {
@@ -143,6 +145,60 @@ function sharkdevelop_add_project_homepage_meta_box(): void {
 		'side',
 		'high'
 	);
+}
+
+function sharkdevelop_add_project_terms_meta_box(): void {
+	add_meta_box(
+		'sharkdevelop-project-terms',
+		__( 'Tags and technologies', 'sharkdevelop' ),
+		'sharkdevelop_render_project_terms_meta_box',
+		'sd_project',
+		'normal',
+		'default'
+	);
+}
+
+function sharkdevelop_render_project_terms_meta_box( WP_Post $post ): void {
+	sharkdevelop_render_ordered_project_terms_field( $post, 'sd_project_tag' );
+	sharkdevelop_render_ordered_project_terms_field( $post, 'sd_project_technology' );
+}
+
+function sharkdevelop_enqueue_project_terms_admin_assets( string $hook_suffix ): void {
+	if ( ! in_array( $hook_suffix, array( 'post.php', 'post-new.php' ), true ) ) {
+		return;
+	}
+
+	$screen = get_current_screen();
+	if ( ! $screen || 'sd_project' !== $screen->post_type ) {
+		return;
+	}
+
+	wp_enqueue_script( 'tags-suggest' );
+	$script = <<<'JS'
+jQuery( function( $ ) {
+	$( '#tax-input-sd_project_tag' ).wpTagsSuggest( { taxonomy: 'sd_project_tag' } );
+	$( '#tax-input-sd_project_technology' ).wpTagsSuggest( { taxonomy: 'sd_project_technology' } );
+
+	$( document ).on( 'click', '.sharkdevelop-popular-term', function() {
+		var $button = $( this );
+		var $field = $( '#' + $button.data( 'target' ) );
+		var term = $button.data( 'term' ).toString();
+		var terms = $field.val().split( ',' ).map( function( value ) {
+			return value.trim();
+		} ).filter( Boolean );
+		var exists = terms.some( function( value ) {
+			return value.toLowerCase() === term.toLowerCase();
+		} );
+
+		if ( ! exists ) {
+			terms.push( term );
+			$field.val( terms.join( ', ' ) ).trigger( 'change' );
+		}
+	} );
+} );
+JS;
+
+	wp_add_inline_script( 'tags-suggest', $script );
 }
 
 function sharkdevelop_render_project_homepage_meta_box( WP_Post $post ): void {
