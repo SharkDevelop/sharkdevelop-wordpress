@@ -1799,6 +1799,10 @@ h1 em {
 		margin-left: 0;
 	}
 
+	.cta-panel h2 span {
+		display: block;
+	}
+
 	.cta-crystal--one {
 		right: -5%;
 		bottom: -23%;
