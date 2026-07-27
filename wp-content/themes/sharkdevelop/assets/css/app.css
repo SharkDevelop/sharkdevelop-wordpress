@@ -118,7 +118,7 @@ img {
 }
 
 .admin-bar .site-header {
-	top: 32px;
+	top: var(--wp-admin--admin-bar--height, 32px);
 }
 
 .site-header__inner {
@@ -1690,10 +1690,6 @@ h1 em {
 		--sd-header-height: 72px;
 	}
 
-	.admin-bar .site-header {
-		top: 46px;
-	}
-
 	.hero {
 		padding-top: calc(var(--sd-header-height) + 18px);
 	}
@@ -1866,5 +1862,12 @@ h1 em {
 	.project-hero__inner,
 	.project__body {
 		grid-template-columns: 1fr;
+	}
+}
+
+/* WordPress scrolls its admin bar with the document on narrow phones. */
+@media (max-width: 600px) {
+	.admin-bar .site-header {
+		top: 0;
 	}
 }
