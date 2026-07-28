@@ -371,7 +371,7 @@
 
 <!-- wp:group {"className":"stat-card","layout":{"type":"default"}} -->
 <div class="wp-block-group stat-card"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">12+</h3>
+<h3 class="wp-block-heading">11+</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -379,13 +379,13 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Building digital products that stand the test of time.</p>
+<p>Experience that helps us make sound decisions from the start.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"stat-card","layout":{"type":"default"}} -->
 <div class="wp-block-group stat-card"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">70+</h3>
+<h3 class="wp-block-heading">40+</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -393,7 +393,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Successful products launched across industries.</p>
+<p>Solving product challenges from first release to growth.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -423,7 +423,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Tell us about your idea and let us turn it into reality.</p>
+<p>Have an idea? Tell us about it, and let&rsquo;s turn it into reality.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

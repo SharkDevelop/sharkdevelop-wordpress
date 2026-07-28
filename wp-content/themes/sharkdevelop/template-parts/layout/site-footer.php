@@ -7,7 +7,7 @@
 					<?php echo sharkdevelop_custom_logo( '', $footer_logo_id ); ?>
 				</a>
 			<?php endif; ?>
-			<p><?php esc_html_e( 'We build digital products that help businesses grow.', 'sharkdevelop' ); ?></p>
+			<p><?php esc_html_e( 'Digital product development for startups and growing businesses.', 'sharkdevelop' ); ?></p>
 		</div>
 
 		<div>
@@ -31,7 +31,7 @@
 		</div>
 
 		<div>
-			<h2><?php esc_html_e( 'Let us talk', 'sharkdevelop' ); ?></h2>
+			<h2><?php esc_html_e( 'Let\'s talk', 'sharkdevelop' ); ?></h2>
 			<ul class="site-footer__nav">
 				<li><a href="mailto:hello@sharkdevelop.com">hello@sharkdevelop.com</a></li>
 				<li><?php esc_html_e( 'Wilmington, DE, USA', 'sharkdevelop' ); ?></li>
