@@ -1471,8 +1471,19 @@ h1 em {
 	padding-block: 46px 34px;
 }
 
-.custom-logo-link--footer {
+.site-footer__inner > * {
+	margin-block-start: 0;
+}
+
+.site-footer__logo {
 	width: 180px;
+	margin: 0;
+}
+
+.site-footer__logo img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .site-footer__brand p {
@@ -1512,6 +1523,10 @@ h1 em {
 
 .site-footer__bottom p {
 	margin: 0;
+}
+
+.site-footer__bottom > * {
+	margin-block: 0;
 }
 
 .site-footer__bottom div {
