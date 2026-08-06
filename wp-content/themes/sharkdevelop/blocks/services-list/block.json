@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sharkdevelop/services-list",
+  "version": "1.0.0",
+  "title": "Services list",
+  "category": "widgets",
+  "icon": "admin-tools",
+  "description": "Displays the current Shark Develop services in their configured order.",
+  "textdomain": "sharkdevelop",
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our capabilities"
+    },
+    "title": {
+      "type": "string",
+      "default": "End-to-end product expertise"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  }
+}

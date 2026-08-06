@@ -52,7 +52,7 @@ function sharkdevelop_register_post_types(): void {
 				'edit_item'     => 'Edit Service',
 			),
 			'public'       => true,
-			'has_archive'  => true,
+			'has_archive'  => false,
 			'menu_icon'    => 'dashicons-admin-tools',
 			'rewrite'      => array(
 				'slug'       => 'services',

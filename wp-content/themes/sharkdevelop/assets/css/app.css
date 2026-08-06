@@ -1826,6 +1826,7 @@ h1 em {
 	display: grid;
 	grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
 	gap: clamp(48px, 8vw, 132px);
+	margin-block-start: 0;
 }
 
 .services-benefits__eyebrow {
@@ -1848,6 +1849,7 @@ h1 em {
 .services-benefits__items {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-block-start: 0;
 	border-top: 1px solid rgba(var(--sd-rgb-text), 0.18);
 	border-left: 1px solid rgba(var(--sd-rgb-text), 0.18);
 }

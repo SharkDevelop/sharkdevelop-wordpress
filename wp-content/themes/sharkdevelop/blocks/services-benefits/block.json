@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sharkdevelop/services-benefits",
+  "version": "1.0.0",
+  "title": "Services benefits",
+  "category": "widgets",
+  "icon": "awards",
+  "description": "Displays the Shark Develop services benefits section.",
+  "textdomain": "sharkdevelop",
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Why Shark Develop"
+    },
+    "title": {
+      "type": "string",
+      "default": "A better way to build a product"
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "target",
+          "title": "Product thinking from day one",
+          "description": "We turn business goals and constraints into clear product decisions before development begins."
+        },
+        {
+          "icon": "route",
+          "title": "Clarity at every stage",
+          "description": "You see priorities, progress, and next steps throughout the work, with decisions kept visible."
+        },
+        {
+          "icon": "layers",
+          "title": "Ready for what comes next",
+          "description": "We build maintainable foundations that support new features, integrations, and business growth."
+        },
+        {
+          "icon": "globe",
+          "title": "Working across time zones",
+          "description": "Clear routines and asynchronous communication keep the project moving, wherever your team is based."
+        },
+        {
+          "icon": "spark",
+          "title": "Impossible is a starting point",
+          "description": "We take on complex product and technical challenges, working through constraints to find a practical path to the intended result."
+        },
+        {
+          "icon": "sliders",
+          "title": "Flexible work terms",
+          "description": "We work on a Fixed Scope basis when requirements are clear and use Time & Materials for discovery, evolving products, and ongoing delivery."
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  }
+}
