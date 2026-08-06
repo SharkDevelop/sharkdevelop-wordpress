@@ -25,7 +25,7 @@
 
 <!-- wp:buttons {"className":"hero__actions"} -->
 <div class="wp-block-buttons hero__actions"><!-- wp:button {"className":"button--cta"} -->
-<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contact/">Let&rsquo;s talk</a></div>
+<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contacts/">Let&rsquo;s talk</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"button--secondary"} -->
@@ -428,7 +428,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"button--primary button--large"} -->
-<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contact/">Let&rsquo;s talk</a></div>
+<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contacts/">Let&rsquo;s talk</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

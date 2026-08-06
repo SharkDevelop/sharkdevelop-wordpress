@@ -31,13 +31,13 @@
 					<li><a href="<?php echo esc_url( home_url( '/case-studies/' ) ); ?>"><?php esc_html_e( 'Projects', 'sharkdevelop' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About Us', 'sharkdevelop' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"><?php esc_html_e( 'Blog', 'sharkdevelop' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'sharkdevelop' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/contacts/' ) ); ?>"><?php esc_html_e( 'Contact', 'sharkdevelop' ); ?></a></li>
 				</ul>
 			<?php endif; ?>
 		</nav>
 
 		<div class="site-header__actions">
-			<a class="button button--primary has-arrow-icon" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
+			<a class="button button--primary has-arrow-icon" href="<?php echo esc_url( home_url( '/contacts/' ) ); ?>">
 				<?php esc_html_e( 'Contact', 'sharkdevelop' ); ?>
 			</a>
 			<button class="icon-button" type="button" aria-label="<?php esc_attr_e( 'Open menu', 'sharkdevelop' ); ?>">
