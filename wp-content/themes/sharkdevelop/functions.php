@@ -11,3 +11,4 @@ require_once __DIR__ . '/inc/front-page-design.php';
 require_once __DIR__ . '/inc/featured-projects.php';
 require_once __DIR__ . '/inc/services-page.php';
 require_once __DIR__ . '/inc/blocks.php';
+require_once __DIR__ . '/inc/service-pages.php';

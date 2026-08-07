@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sharkdevelop/selected-projects",
+  "version": "1.0.0",
+  "title": "Selected projects",
+  "category": "widgets",
+  "icon": "portfolio",
+  "description": "Displays projects selected for this page.",
+  "textdomain": "sharkdevelop",
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Selected mobile work"
+    },
+    "title": {
+      "type": "string",
+      "default": "Mobile products built around real use"
+    },
+    "projectIds": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  }
+}

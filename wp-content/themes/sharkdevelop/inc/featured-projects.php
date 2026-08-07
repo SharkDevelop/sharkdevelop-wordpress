@@ -31,6 +31,10 @@ function sharkdevelop_render_featured_projects(): string {
 		)
 	);
 
+	return sharkdevelop_render_project_showcase( $projects, true );
+}
+
+function sharkdevelop_render_project_showcase( WP_Query $projects, bool $show_footer = false ): string {
 	if ( ! $projects->have_posts() ) {
 		return '';
 	}
@@ -90,11 +94,13 @@ function sharkdevelop_render_featured_projects(): string {
 			</article>
 		<?php endwhile; ?>
 	</div>
-	<div class="project-showcase__footer">
-		<a class="button button--outline button--large has-arrow-icon" href="<?php echo esc_url( get_post_type_archive_link( 'sd_project' ) ); ?>">
-			<span class="button__label"><?php esc_html_e( 'View all projects', 'sharkdevelop' ); ?></span>
-		</a>
-	</div>
+	<?php if ( $show_footer ) : ?>
+		<div class="project-showcase__footer">
+			<a class="button button--outline button--large has-arrow-icon" href="<?php echo esc_url( get_post_type_archive_link( 'sd_project' ) ); ?>">
+				<span class="button__label"><?php esc_html_e( 'View all projects', 'sharkdevelop' ); ?></span>
+			</a>
+		</div>
+	<?php endif; ?>
 	<?php
 	wp_reset_postdata();
 
