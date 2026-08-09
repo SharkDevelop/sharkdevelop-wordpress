@@ -151,7 +151,7 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">A clear path to a product people can use</h2>
+<h2 class="wp-block-heading">A clear path through the key milestones</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -162,11 +162,11 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Define the product</h3>
+<h3 class="wp-block-heading">Research and requirements</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Clarify users, priorities, constraints, and the first release that makes sense to build.</p>
+<p>Clarify business goals, target users, core scenarios, functional requirements, and priorities for the first release.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -176,11 +176,11 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Design the experience</h3>
+<h3 class="wp-block-heading">UX and interface design</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Shape flows and interfaces around the decisions people need to make on a small screen.</p>
+<p>Map user flows, create a clickable prototype when it helps, and design the screens and interactions people use every day.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -190,11 +190,11 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Build and connect</h3>
+<h3 class="wp-block-heading">Backend and integrations</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Develop the app, connect the services behind it, and test the journeys that matter most.</p>
+<p>Build APIs and data flows, then connect payments, maps, notifications, internal systems, and third-party services.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -204,11 +204,39 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Launch and learn</h3>
+<h3 class="wp-block-heading">Mobile development</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Prepare the release, support the first users, and use what you learn to set the next priorities.</p>
+<p>Turn the approved product into a reliable iOS and Android app, including platform-specific behavior, animations, and device features where needed.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-phase","layout":{"type":"constrained"}} -->
+<div class="wp-block-group service-phase"><!-- wp:paragraph {"className":"service-phase__number"} -->
+<p class="service-phase__number">05</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Quality assurance</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Test features throughout development across real devices, core journeys, performance, and data, so issues are found before release.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-phase","layout":{"type":"constrained"}} -->
+<div class="wp-block-group service-phase"><!-- wp:paragraph {"className":"service-phase__number"} -->
+<p class="service-phase__number">06</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Launch and next steps</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Prepare App Store and Google Play releases, support the launch, and use early feedback to set the next product priorities.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
