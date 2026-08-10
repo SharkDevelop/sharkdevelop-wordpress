@@ -1687,9 +1687,66 @@ h1 em {
 }
 
 .services-listing {
+	position: relative;
+	isolation: isolate;
+	overflow: visible;
 	padding-top: clamp(56px, 7vw, 96px);
 	padding-bottom: clamp(96px, 12vw, 180px);
 	background: var(--sd-color-paper);
+}
+
+.services-listing::before {
+	position: absolute;
+	top: -260px;
+	left: -210px;
+	z-index: 0;
+	width: min(58vw, 820px);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	filter: blur(5px);
+	background:
+		radial-gradient(ellipse at 61% 52%, rgba(var(--sd-rgb-primary), 0.18) 0, rgba(var(--sd-rgb-accent), 0.1) 34%, transparent 68%),
+		radial-gradient(ellipse at 36% 72%, rgba(var(--sd-rgb-accent), 0.13) 0, transparent 56%);
+	content: '';
+	pointer-events: none;
+}
+
+.services-listing::after {
+	position: absolute;
+	top: -80px;
+	left: clamp(220px, 28vw, 470px);
+	z-index: 0;
+	width: 30px;
+	aspect-ratio: 1;
+	background: rgba(var(--sd-rgb-text), 0.88);
+	clip-path: polygon(50% 0, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0 50%, 41% 41%);
+	box-shadow: 0 0 16px rgba(var(--sd-rgb-text), 0.58), 0 0 34px rgba(var(--sd-rgb-secondary), 0.34);
+	content: '';
+	pointer-events: none;
+}
+
+.services-listing > .container {
+	position: relative;
+	z-index: 1;
+}
+
+.services-listing > .container::before {
+	position: absolute;
+	top: -345px;
+	left: calc((100vw - var(--sd-container)) / -2 - 210px);
+	z-index: -1;
+	width: min(58vw, 820px);
+	aspect-ratio: 1;
+	background:
+		radial-gradient(circle at 53% 31%, rgba(var(--sd-rgb-text), 0.92) 0 1px, transparent 2px),
+		radial-gradient(circle at 59% 39%, rgba(var(--sd-rgb-accent), 0.74) 0 2px, transparent 3px),
+		radial-gradient(circle at 68% 50%, rgba(var(--sd-rgb-secondary), 0.78) 0 1px, transparent 2px),
+		radial-gradient(circle at 47% 55%, rgba(var(--sd-rgb-text), 0.72) 0 2px, transparent 3px),
+		radial-gradient(circle at 75% 62%, rgba(var(--sd-rgb-accent), 0.82) 0 1px, transparent 2px),
+		radial-gradient(circle at 40% 61%, rgba(var(--sd-rgb-secondary), 0.64) 0 1px, transparent 2px),
+		radial-gradient(circle at 61% 65%, rgba(var(--sd-rgb-text), 0.7) 0 2px, transparent 3px);
+	content: '';
+	pointer-events: none;
 }
 
 .services-listing__intro {
