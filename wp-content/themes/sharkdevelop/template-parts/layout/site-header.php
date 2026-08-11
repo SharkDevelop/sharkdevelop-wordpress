@@ -14,7 +14,7 @@
 			</a>
 		<?php endif; ?>
 
-		<nav class="site-nav" aria-label="<?php esc_attr_e( 'Primary menu', 'sharkdevelop' ); ?>">
+		<nav id="primary-navigation" class="site-nav" aria-label="<?php esc_attr_e( 'Primary menu', 'sharkdevelop' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
@@ -40,7 +40,7 @@
 			<a class="button button--primary has-arrow-icon" href="<?php echo esc_url( home_url( '/contacts/' ) ); ?>">
 				<?php esc_html_e( 'Contact', 'sharkdevelop' ); ?>
 			</a>
-			<button class="icon-button" type="button" aria-label="<?php esc_attr_e( 'Open menu', 'sharkdevelop' ); ?>">
+			<button class="icon-button" type="button" aria-label="<?php esc_attr_e( 'Open menu', 'sharkdevelop' ); ?>" aria-controls="primary-navigation" aria-expanded="false">
 				<span></span>
 			</button>
 		</div>
