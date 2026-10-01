@@ -243,48 +243,15 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:group --></section>
 <!-- /wp:group -->
 
-<!-- wp:group {"tagName":"section","className":"service-section service-section--faq alignfull","layout":{"type":"constrained"}} -->
-<section class="wp-block-group service-section service-section--faq alignfull"><!-- wp:group {"className":"container service-faq","layout":{"type":"constrained"}} -->
-<div class="wp-block-group container service-faq"><!-- wp:group {"className":"service-section__heading","layout":{"type":"constrained"}} -->
-<div class="wp-block-group service-section__heading"><!-- wp:paragraph {"className":"eyebrow"} -->
-<p class="eyebrow">Mobile app questions</p>
+<!-- wp:group {"tagName":"section","className":"section cta-section service-detail-cta alignfull","layout":{"type":"default"}} -->
+<section class="wp-block-group section cta-section service-detail-cta alignfull"><!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+<div class="wp-block-group container"><!-- wp:group {"className":"cta-panel","layout":{"type":"default"}} -->
+<div class="wp-block-group cta-panel"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Let&rsquo;s talk</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">What clients usually want to know</h2>
-<!-- /wp:heading --></div>
-<!-- /wp:group -->
-
-<!-- wp:details -->
-<details class="wp-block-details"><summary>Should we build a native or cross-platform app?</summary><!-- wp:paragraph -->
-<p>It depends on the product, required device capabilities, existing technology, timeline, and how the app will evolve. We compare the trade-offs before choosing an approach.</p>
-<!-- /wp:paragraph --></details>
-<!-- /wp:details -->
-
-<!-- wp:details -->
-<details class="wp-block-details"><summary>Can you develop an MVP?</summary><!-- wp:paragraph -->
-<p>Yes. We help define the first release around the journeys that need to be tested, so the product can reach real users without carrying unnecessary scope.</p>
-<!-- /wp:paragraph --></details>
-<!-- /wp:details -->
-
-<!-- wp:details -->
-<details class="wp-block-details"><summary>Can you work on an existing app?</summary><!-- wp:paragraph -->
-<p>Yes. We begin by understanding the current product, codebase, user problems, and the next business goal before proposing the right scope of work.</p>
-<!-- /wp:paragraph --></details>
-<!-- /wp:details -->
-
-<!-- wp:details -->
-<details class="wp-block-details"><summary>Do you handle the backend and integrations too?</summary><!-- wp:paragraph -->
-<p>Yes. Mobile apps often depend on backend systems, third-party services, payments, maps, and notifications. We can build or extend the parts required for the product to work as one system.</p>
-<!-- /wp:paragraph --></details>
-<!-- /wp:details --></div>
-<!-- /wp:group --></section>
-<!-- /wp:group -->
-
-<!-- wp:group {"tagName":"section","className":"service-detail-cta alignfull","layout":{"type":"constrained"}} -->
-<section class="wp-block-group service-detail-cta alignfull"><!-- wp:group {"className":"container service-detail-cta__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group container service-detail-cta__inner"><!-- wp:group {"className":"service-detail-cta__content","layout":{"type":"constrained"}} -->
-<div class="wp-block-group service-detail-cta__content"><!-- wp:heading -->
 <h2 class="wp-block-heading">Have a mobile product in mind?</h2>
 <!-- /wp:heading -->
 
@@ -293,10 +260,11 @@ function sharkdevelop_mobile_apps_default_content(): string {
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"button--cta"} -->
-<div class="wp-block-button button--cta"><a class="wp-block-button__link wp-element-button" href="/contacts/">Let&rsquo;s talk</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"button--primary button--large"} -->
+<div class="wp-block-button button--primary button--large"><a class="wp-block-button__link wp-element-button" href="/contacts/">Let&rsquo;s talk</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group --></section>

@@ -16,11 +16,13 @@
 
 		const closeMenu = () => {
 			header.classList.remove('is-menu-open');
+			document.body.classList.remove('mobile-menu-open');
 			toggle.setAttribute('aria-expanded', 'false');
 		};
 
 		const openMenu = () => {
 			header.classList.add('is-menu-open');
+			document.body.classList.add('mobile-menu-open');
 			toggle.setAttribute('aria-expanded', 'true');
 		};
 

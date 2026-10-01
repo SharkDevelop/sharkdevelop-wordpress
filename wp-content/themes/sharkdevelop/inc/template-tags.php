@@ -84,3 +84,68 @@ function sharkdevelop_custom_logo( string $class = '', int $logo_id = 0 ): strin
 function sharkdevelop_arrow_icon(): string {
 	return '<svg class="icon icon--arrow" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
+
+function sharkdevelop_find_block_by_class( array $blocks, string $class_name ): array {
+	foreach ( $blocks as $block ) {
+		$classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+
+		if ( in_array( $class_name, $classes, true ) ) {
+			return $block;
+		}
+
+		if ( ! empty( $block['innerBlocks'] ) ) {
+			$match = sharkdevelop_find_block_by_class( $block['innerBlocks'], $class_name );
+
+			if ( $match ) {
+				return $match;
+			}
+		}
+	}
+
+	return array();
+}
+
+function sharkdevelop_footer_contact_block(): array {
+	if ( ! function_exists( 'get_block_template' ) ) {
+		return array();
+	}
+
+	$template = get_block_template( get_stylesheet() . '//footer', 'wp_template_part' );
+
+	if ( ! $template || empty( $template->content ) ) {
+		return array();
+	}
+
+	$blocks = parse_blocks( $template->content );
+	$contact_block = sharkdevelop_find_block_by_class( $blocks, 'site-footer__contact' );
+
+	if ( $contact_block ) {
+		return $contact_block;
+	}
+
+	$find_contact_group = static function ( array $candidates ) use ( &$find_contact_group ): array {
+		foreach ( $candidates as $candidate ) {
+			foreach ( $candidate['innerBlocks'] ?? array() as $inner_block ) {
+				if ( 'core/list' === $inner_block['blockName'] && preg_match( '/(?:mailto:|wa\.me\/|tel:)/', serialize_block( $inner_block ) ) ) {
+					return $candidate;
+				}
+			}
+
+			$match = $find_contact_group( $candidate['innerBlocks'] ?? array() );
+
+			if ( $match ) {
+				return $match;
+			}
+		}
+
+		return array();
+	};
+
+	return $find_contact_group( $blocks );
+}
+
+function sharkdevelop_render_footer_contact_block(): string {
+	$contact_block = sharkdevelop_footer_contact_block();
+
+	return $contact_block ? render_block( $contact_block ) : '';
+}

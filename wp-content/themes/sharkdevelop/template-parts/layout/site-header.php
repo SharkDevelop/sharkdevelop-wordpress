@@ -34,6 +34,14 @@
 					<li><a href="<?php echo esc_url( home_url( '/contacts/' ) ); ?>"><?php esc_html_e( 'Contact', 'sharkdevelop' ); ?></a></li>
 				</ul>
 			<?php endif; ?>
+
+			<div class="mobile-menu__contact">
+				<?php echo sharkdevelop_render_footer_contact_block(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<div class="mobile-menu__legal">
+					<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>"><?php esc_html_e( 'Privacy Policy', 'sharkdevelop' ); ?></a>
+					<a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>"><?php esc_html_e( 'Terms of Service', 'sharkdevelop' ); ?></a>
+				</div>
+			</div>
 		</nav>
 
 		<div class="site-header__actions">
